@@ -55,8 +55,12 @@ codeweave-adr-framework/
 │   └─ ADR-4-025-structured-logging-strategy.md
 │
 └─ examples/
-    └─ system-context/
-        └─ industrial-sensor-monitoring-platform.md
+    └─ financial-reconciliation/
+        └─ system-context.md
+        └─ adr-index.md
+    └─ sensor-platform/
+        └─ system-context.md
+
 ```
 
 ---
