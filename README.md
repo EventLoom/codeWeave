@@ -11,7 +11,30 @@ CodeWeave is an engineering doctrine designed for teams who:
 - expect systems to live longer than originally planned
 - value predictable behaviour under operational stress
 
-This repository intentionally includes **only a subset of the full ADR library**.
+# The CodeWeave Decision Constellation
+
+The CodeWeave framework is not a checklist or maturity ladder.
+
+It is a **constellation of interlocking architectural constraints** that collectively govern how systems are designed, deployed, and operated.
+
+Each decision is intentionally small in scope, but together they form a **governance plane that prevents accidental complexity**.
+
+[![CodeWeave Decision Constellation](docs/decision-constellation.svg)](https://codeweave.lemonsqueezy.com/checkout)
+
+The full framework currently contains **35+ Architecture Decision Records** across several engineering domains:
+
+| Layer | Domain | Purpose |
+|------|------|------|
+| **0** | Structural Architecture | Execution boundaries, deployment models |
+| **1** | Security Boundaries | Trust zones and authentication models |
+| **2** | Operational Control | Service supervision and runtime control |
+| **3** | Governance Control Plane | Preventing architectural drift |
+| **4** | Engineering Standards | Logging, testing, configuration discipline |
+| **5** | Incident Response | Failure handling and recovery priorities |
+
+This repository includes a **small subset of those decisions** to demonstrate how the framework works in practice.
+
+The full decision library is available in the **CodeWeave ADR Framework Pack**.
 
 ---
 
@@ -109,7 +132,8 @@ codeweave-adr-framework/
 
 A couple of system context documents demonstrating how these ADRs are applied can be found here:
 
-→ [Industrial Sensor Monitoring Platform](./examples/sensor-platform/system-context.md)
+→ [Industrial Sensor Monitoring Platform](./examples/sensor-platform/system-context.md) 
+
 → [Financial Reconciliation Platform](./examples/financial-reconciliation/system-context.md)
 
 # Example ADR Index
@@ -117,6 +141,7 @@ A couple of system context documents demonstrating how these ADRs are applied ca
 A couple of ADR Indexs - showing how you can use the system of governance purposes are here:
 
 → [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
+
 → [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
 
 This example illustrates how architectural decisions are applied in real system documentation.
@@ -140,3 +165,14 @@ The goal is to demonstrate the structure and philosophy of the framework without
 
 
 [def]: ./examples/financial-recondsystem-context.md
+
+# Stop Re-Litigating the Same Architecture Debates
+
+If a decision is challenged, the **burden of proof lies with the alternative**.
+
+Re-litigation without new information is an **operational cost**.
+
+The full CodeWeave ADR framework contains **35+ battle-tested decisions** used to constrain architectural complexity and keep systems operationally legible.
+
+➡️ Get the full framework  
+https://codeweave.lemonsqueezy.com/checkout
