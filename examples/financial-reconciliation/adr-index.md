@@ -1,3 +1,4 @@
+
 # ADR Index: Internal Financial Reconciliation Engine
 
 ## Purpose of this Document
@@ -16,7 +17,7 @@ Because this engine handles **batch reconciliation**, we reject distributed comp
 
 ---
 
-## ADR-0-001 — Default Execution Model
+## [ADR-0-001 — Default Execution Model](../adr/ADR-0-001-default-execution-model.md)
 
 **Status:** Active  
 
@@ -28,7 +29,7 @@ The reconciliation engine runs as a **monolithic process on a single, isolated i
 
 ---
 
-## ADR-0-003 — Database Ownership Model
+## [ADR-0-003 — Database Ownership Model](../adr/ADR-0-003-database-ownership-model.md)
 
 **Status:** Active  
 
@@ -40,7 +41,7 @@ We use **AWS RDS** to ensure high availability of the ledger data, accepting **h
 
 ---
 
-## ADR-2-008 — Operational Control Strategy
+## [ADR-2-008 — Operational Control Strategy](../adr/ADR-2-008-operational-control-strategy.md)
 
 **Status:** Active  
 
@@ -59,7 +60,7 @@ We optimize for **strict boundaries and regulatory traceability**.
 
 ---
 
-## ADR-1-007 — Trust Boundaries
+## [ADR-1-007 — Trust Boundaries](../adr/ADR-1-007-trust-boundaries.md)
 
 **Status:** Active  
 
@@ -71,7 +72,7 @@ This engine sits in a **private subnet with zero public ingress**.
 
 ---
 
-## ADR-1-006 — Authentication Model
+## [ADR-1-006 — Authentication Model](../adr/ADR-1-006-authentication-model.md)
 
 **Status:** Active  
 
@@ -84,7 +85,7 @@ The engine uses **strictly scoped, rotated service-account credentials** to acce
 
 ---
 
-## ADR-4-021 — Audit Logging Strategy
+## [ADR-4-021 — Audit Logging Strategy](../adr/ADR-4-021-audit-logging-strategy.md)
 
 **Status:** Active  
 
@@ -103,7 +104,7 @@ We optimize for code that is **boring to maintain over time**.
 
 ---
 
-## ADR-3-011 — Optimisation Target
+## [ADR-3-011 — Optimisation Target](../adr/ADR-3-011-optimisation-target.md)
 
 **Status:** Active  
 
@@ -115,7 +116,7 @@ If a batch reconciliation query takes slightly longer but is **easier to read an
 
 ---
 
-## ADR-4-016 — Testing Strategy
+## [ADR-4-016 — Testing Strategy](../adr/ADR-4-016-testing-strategy.md)
 
 **Status:** Active  
 
@@ -123,13 +124,14 @@ If a batch reconciliation query takes slightly longer but is **easier to read an
 Prioritizing **integration tests over unit tests**.
 
 **Local Application:**  
+
 Slower test execution vs catching real bugs.
 
 We spin up a **test database** and **mock the payment gateway** for end-to-end integration testing rather than unit testing isolated math functions.
 
 ---
 
-## ADR-4-020 — Dependency Management
+## [ADR-4-020 — Dependency Management](../adr/ADR-4-020-dependency-management.md)
 
 **Status:** Active  
 
@@ -137,13 +139,14 @@ We spin up a **test database** and **mock the payment gateway** for end-to-end i
 Conservative dependency updates with **exact version pinning**.
 
 **Local Application:**  
+
 No **floating versions** in our package manager.
 
 We accept **manual update effort vs production stability** to ensure a third-party update doesn't silently break our financial calculations.
 
 ---
 
-## ADR-3-009 — Backup Strategy
+## [ADR-3-009 — Backup Strategy](../adr/ADR-3-009-backup-strategy.md)
 
 **Status:** Active  
 
@@ -151,6 +154,7 @@ We accept **manual update effort vs production stability** to ensure a third-par
 Preferring **simple, tested backups** over complex automation.
 
 **Local Application:**  
+
 We accept **manual effort vs restore confidence**.
 
 Database **snapshots are tested manually every quarter**.
@@ -161,7 +165,7 @@ Database **snapshots are tested manually every quarter**.
 
 ---
 
-## ADR-3-012 — Context Preservation Strategy
+## [ADR-3-012 — Context Preservation Strategy](../adr/ADR-3-012-context-preservation-strategy.md)
 
 **Status:** Active  
 
@@ -169,4 +173,5 @@ Database **snapshots are tested manually every quarter**.
 Explicitly documenting **architectural decisions with rationale and trade-offs**.
 
 **Local Application:**  
+
 This very document, along with **`system-context.md`**, serves as the required artifacts to satisfy this constraint.

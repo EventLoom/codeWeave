@@ -107,9 +107,17 @@ codeweave-adr-framework/
 
 # Example System Context
 
-A sample system context demonstrating how these ADRs are applied can be found here:
+A couple of system context documents demonstrating how these ADRs are applied can be found here:
 
-→ [Industrial Sensor Monitoring Platform](./docs/system-context/industrial-sensor-monitoring-platform.md)
+→ [Industrial Sensor Monitoring Platform](./examples/sensor-platform/system-context.md)
+→ [Financial Reconciliation Platform](./examples/financial-reconciliation/system-context.md)
+
+# Example ADR Index
+
+A couple of ADR Indexs - showing how you can use the system of governance purposes are here:
+
+→ [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
+→ [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
 
 This example illustrates how architectural decisions are applied in real system documentation.
 
@@ -129,3 +137,6 @@ The full CodeWeave framework contains additional architectural and operational d
 This repository intentionally publishes only a limited subset of those decisions.
 
 The goal is to demonstrate the structure and philosophy of the framework without publishing the full engineering doctrine.
+
+
+[def]: ./examples/financial-recondsystem-context.md
