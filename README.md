@@ -19,7 +19,7 @@ It is a **constellation of interlocking architectural constraints** that collect
 
 Each decision is intentionally small in scope, but together they form a **governance plane that prevents accidental complexity**.
 
-[![CodeWeave Decision Constellation](docs/decision-constellation.svg)](https://codeweave.lemonsqueezy.com/checkout)
+[CodeWeave Full Framework](https://codeweave.lemonsqueezy.com/checkout)
 
 The full framework currently contains **35+ Architecture Decision Records** across several engineering domains:
 
