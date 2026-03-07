@@ -14,8 +14,8 @@ If a decision here is challenged, the **burden of proof lies with the alternativ
 | [ADR-0-001](../../adr/ADR-0-001-default-execution-model.md) | Default Execution Model | Public Sample |
 | [ADR-3-012](../../adr/ADR-3-012-context-preservation-strategy.md) | Context Preservation Strategy | Public Sample |
 | [ADR-4-015](../../adr/ADR-4-015-configuration-management.md) | Configuration Management | Public Sample |
-| [ADR-4-024](../../adr/ADR-4-024-error-handling-classification.md) | Error Handling Model | Public Sample |
-| [ADR-4-025](../../adr/ADR-4-025-structured-logging-strategy.md) | Structured Logging | Public Sample |
+| [ADR-4-024](../../adr/ADR-4-024-error-handling-and-classification.md) | Error Handling Model | Public Sample |
+| [ADR-4-025](../../adr/ADR-4-025-structured-application-logging.md) | Structured Logging | Public Sample |
 | ADR-0-003 | Database Ownership Model | Full Framework |
 | ADR-1-007 | Trust Boundaries | Full Framework |
 | ADR-4-020 | Dependency Management | Full Framework |
