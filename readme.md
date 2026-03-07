@@ -66,11 +66,11 @@ These decisions represent foundational engineering constraints used throughout t
 ```mermaid
 flowchart TD
 
-A[ADR-0-001\nDefault Execution Model]
-B[ADR-3-012\nContext Preservation Strategy]
-C[ADR-4-015\nConfiguration Management]
-D[ADR-4-024\nError Classification]
-E[ADR-4-025\nStructured Logging]
+A[ADR-0-001 Default Execution Model]
+B[ADR-3-012 Context Preservation Strategy]
+C[ADR-4-015 Configuration Management]
+D[ADR-4-024 Error Classification]
+E[ADR-4-025 Structured Logging]
 
 A --> C
 A --> D
