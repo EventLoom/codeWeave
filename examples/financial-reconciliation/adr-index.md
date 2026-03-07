@@ -17,7 +17,7 @@ Because this engine handles **batch reconciliation**, we reject distributed comp
 
 ---
 
-## [ADR-0-001 — Default Execution Model](../adr/ADR-0-001-default-execution-model.md)
+## [ADR-0-001 — Default Execution Model](../../adr/ADR-0-001-default-execution-model.md)
 
 **Status:** Active  
 
@@ -29,7 +29,7 @@ The reconciliation engine runs as a **monolithic process on a single, isolated i
 
 ---
 
-## [ADR-0-003 — Database Ownership Model](../adr/ADR-0-003-database-ownership-model.md)
+## [ADR-0-003 — Database Ownership Model](../../adr/ADR-0-003-database-ownership-model.md)
 
 **Status:** Active  
 
@@ -41,7 +41,7 @@ We use **AWS RDS** to ensure high availability of the ledger data, accepting **h
 
 ---
 
-## [ADR-2-008 — Operational Control Strategy](../adr/ADR-2-008-operational-control-strategy.md)
+## [ADR-2-008 — Operational Control Strategy](../../adr/ADR-2-008-operational-control-strategy.md)
 
 **Status:** Active  
 
@@ -60,7 +60,7 @@ We optimize for **strict boundaries and regulatory traceability**.
 
 ---
 
-## [ADR-1-007 — Trust Boundaries](../adr/ADR-1-007-trust-boundaries.md)
+## [ADR-1-007 — Trust Boundaries](../../adr/ADR-1-007-trust-boundaries.md)
 
 **Status:** Active  
 
@@ -72,7 +72,7 @@ This engine sits in a **private subnet with zero public ingress**.
 
 ---
 
-## [ADR-1-006 — Authentication Model](../adr/ADR-1-006-authentication-model.md)
+## [ADR-1-006 — Authentication Model](../../adr/ADR-1-006-authentication-model.md)
 
 **Status:** Active  
 
@@ -85,7 +85,7 @@ The engine uses **strictly scoped, rotated service-account credentials** to acce
 
 ---
 
-## [ADR-4-021 — Audit Logging Strategy](../adr/ADR-4-021-audit-logging-strategy.md)
+## [ADR-4-021 — Audit Logging Strategy](../../adr/ADR-4-021-audit-logging-strategy.md)
 
 **Status:** Active  
 
@@ -104,7 +104,7 @@ We optimize for code that is **boring to maintain over time**.
 
 ---
 
-## [ADR-3-011 — Optimisation Target](../adr/ADR-3-011-optimisation-target.md)
+## [ADR-3-011 — Optimisation Target](../../adr/ADR-3-011-optimisation-target.md)
 
 **Status:** Active  
 
@@ -116,7 +116,7 @@ If a batch reconciliation query takes slightly longer but is **easier to read an
 
 ---
 
-## [ADR-4-016 — Testing Strategy](../adr/ADR-4-016-testing-strategy.md)
+## [ADR-4-016 — Testing Strategy](../../adr/ADR-4-016-testing-strategy.md)
 
 **Status:** Active  
 
@@ -131,7 +131,7 @@ We spin up a **test database** and **mock the payment gateway** for end-to-end i
 
 ---
 
-## [ADR-4-020 — Dependency Management](../adr/ADR-4-020-dependency-management.md)
+## [ADR-4-020 — Dependency Management](../../adr/ADR-4-020-dependency-management.md)
 
 **Status:** Active  
 
@@ -146,7 +146,7 @@ We accept **manual update effort vs production stability** to ensure a third-par
 
 ---
 
-## [ADR-3-009 — Backup Strategy](../adr/ADR-3-009-backup-strategy.md)
+## [ADR-3-009 — Backup Strategy](../../adr/ADR-3-009-backup-strategy.md)
 
 **Status:** Active  
 
@@ -165,7 +165,7 @@ Database **snapshots are tested manually every quarter**.
 
 ---
 
-## [ADR-3-012 — Context Preservation Strategy](../adr/ADR-3-012-context-preservation-strategy.md)
+## [ADR-3-012 — Context Preservation Strategy](../../adr/ADR-3-012-context-preservation-strategy.md)
 
 **Status:** Active  
 
