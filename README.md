@@ -62,7 +62,7 @@ These decisions represent foundational engineering constraints used throughout t
 ---
 
 # Decision Map
-mermaid
+'''mermaid
 flowchart TD
 
 A[ADR-0-001 Default Execution Model]
