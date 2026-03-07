@@ -7,7 +7,7 @@ The **Internal Financial Reconciliation Engine** is a backend system that runs n
 Because this system handles sensitive financial data, it is designed to **optimise for failure, not success**. If the reconciliation fails, the failure must be obvious, and recovery must occur quickly without complex coordination. We have explicitly chosen a design that is **boring, legible, and robust**.
 
 **Governing Decision:**  
-[ADR-3-011: Optimisation Target — Optimising for maintainability over performance](../../adr/ADR-3-011-optimisation-target.md)
+[ADR-3-011: Optimisation Target — Optimising for maintainability over performance](../../adr/ADR-X-XXX-additional-content.md)
 
 We gladly accept that a batch job might take 20 minutes longer to run if the code remains simpler to debug during an incident.
 
@@ -32,7 +32,7 @@ The engine operates on a **single Linux host**, which acts as the unit of failur
 We use **systemd (specifically systemd timers)** for service management and scheduling over application-level process managers or external job schedulers (such as Airflow) to maintain operational consistency.
 
 **Governing Decision:**  
-[ADR-2-008: Operational Control Strategy](../../adr/ADR-2-008-operational-control.md)
+[ADR-2-008: Operational Control Strategy](../../adr/ADR-X-XXX-additional-content.md)
 
 ### Data Layer
 
@@ -40,8 +40,8 @@ We default to **managed database services** over self-hosted options. Financial 
 
 **Governing Decisions:**
 
-- [ADR-0-003: Database Ownership Model](../../adr/ADR-0-003-database-ownership.md)
-- [ADR-3-009: Backup Strategy](../../adr/ADR-3-009-backup-strategy.md)
+- [ADR-0-003: Database Ownership Model](../../adr/ADR-X-XXX-additional-content.md)
+- [ADR-3-009: Backup Strategy](../../adr/ADR-X-XXX-additional-content.md)
 
 ---
 
@@ -55,15 +55,15 @@ We maintain strict separation between **internal and public systems**. This engi
 
 **Governing Decisions:**
 
-- [ADR-1-007: Trust Boundaries](../../adr/ADR-1-007-trust-boundaries.md)
-- [ADR-1-006: Authentication Model](../../adr/ADR-1-006-authentication-model.md)
+- [ADR-1-007: Trust Boundaries](../../adr/ADR-X-XXX-additional-content.md)
+- [ADR-1-006: Authentication Model](../../adr/ADR-X-XXX-additional-content.md)
 
 ### Compliance Tracking
 
 We capture **security and compliance-relevant events separately from operational logs**. We accept the trade-off of managing additional log streams to ensure regulatory clarity and traceability.
 
 **Governing Decision:**  
-[ADR-4-021: Audit Logging Strategy](../../adr/ADR-4-021-audit-logging.md)
+[ADR-4-021: Audit Logging Strategy](../../adr/ADR-X-XXX-additional-content.md)
 
 ---
 
@@ -76,11 +76,11 @@ To ensure predictable evolution of software systems and prevent release instabil
 Financial math libraries and external SDKs are **strictly controlled**. We use conservative dependency updates with **exact version pinning**. We accept manual update effort to guarantee production stability.
 
 **Governing Decision:**  
-[ADR-4-020: Dependency Management](../../adr/ADR-4-020-dependency-management.md)
+[ADR-4-020: Dependency Management](../../adr/ADR-X-XXX-additional-content.md)
 
 ### Testing
 
 Because this engine integrates heavily with external gateway APIs and the database, we **prioritize integration tests over unit tests**. Slower test execution is an acceptable trade-off for catching real bugs.
 
 **Governing Decision:**  
-[ADR-4-016: Testing Strategy](../../adr/ADR-4-016-testing-strategy.md)
+[ADR-4-016: Testing Strategy](../../adr/ADR-X-XXX-additional-content.md)

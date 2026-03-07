@@ -8,15 +8,14 @@ Because we expect systems to live longer than originally planned—and because w
 
 We deliberately reject hypothetical future scale in favour of operational clarity. The existence of this document itself is a requirement of our governance plane to ensure that the next engineer doesn't have to guess why we built it this way.
 
-**Governing Decision:** ADR-3-012 — *Context Preservation Strategy*  
-Explicitly documenting architectural decisions with rationale and trade-offs.
+**Governing Decision:**  
+[ADR-3-012 — Context Preservation Strategy](../adr/ADR-3-012-context-preservation-strategy.md)
 
-**Governing Decision:** ADR-3-011 — *Optimisation Target*  
-Optimising for maintainability over performance.
+Architectural decisions are explicitly documented with rationale and trade-offs so that system intent remains visible to future engineers.
 
 ---
 
-# 2. Structural Architecture (Layers 0–2)
+# 2. Structural Architecture
 
 To prevent premature distributed complexity, the system is designed with explicit boundaries and minimal moving parts.
 
@@ -26,35 +25,14 @@ We gladly accept the trade-off of a **single point of failure and limited horizo
 
 The system runs on a **single Linux host**, which serves as the unit of failure, deployment, and operational responsibility.
 
-**Governing Decision:** ADR-0-001 — *Default Execution Model*
+**Governing Decision:**  
+[ADR-0-001 — Default Execution Model](../adr/ADR-0-001-default-execution-model.md)
 
-### Compute & Decomposition
-
-The application is deployed as a **single monolithic service**.
-
-We avoid microservices by default to prevent large codebases from fracturing into complex failure modes.
-
-**Governing Decision:** ADR-0-004 — *Service Decomposition Strategy*
-
-### Supervision
-
-We use **systemd for service management** rather than application-level process managers.
-
-This ensures operational consistency despite a steeper learning curve.
-
-**Governing Decision:** ADR-2-008 — *Operational Control Strategy*
-
-### Data Persistence
-
-We default to **managed database services** (e.g., AWS RDS) rather than self-hosted databases.
-
-We accept higher costs and vendor dependency in exchange for significantly reduced operational risk.
-
-**Governing Decision:** ADR-0-003 — *Database Ownership Model*
+By keeping the operational boundary constrained to a single host, we dramatically reduce coordination complexity and the number of failure modes that can emerge during incidents.
 
 ---
 
-# 3. Engineering Standards & Operations (Layer 4)
+# 3. Engineering Standards & Operations
 
 The cost of a decision is paid when something goes wrong, not when everything is healthy.
 
@@ -66,54 +44,79 @@ All runtime configuration is managed via **environment variables**.
 
 This guarantees simplicity and auditability over the hidden coupling of complex configuration files.
 
-**Governing Decision:** ADR-4-015 — *Configuration Management*
+**Governing Decision:**  
+[ADR-4-015 — Configuration Management](../adr/ADR-4-015-configuration-management.md)
 
-### Error Handling
+Examples of runtime configuration include:
 
-When a sensor payload is malformed, the system enforces a **consistent taxonomy and representation for failures**.
-
-This produces predictable and diagnosable failure behaviour.
-
-**Governing Decision:** ADR-4-024 — *Error Handling and Classification Model*
-
-### Observability
-
-We prioritise **metrics and structured logs** over distributed tracing.
-
-Standardising structured logging across the service ensures consistent diagnostics and machine-parseable output for operational clarity.
-
-**Governing Decisions:**
-
-- ADR-4-025 — *Structured Application Logging Strategy*
-- ADR-4-013 — *Monitoring and Observability Strategy*
-
-### Data Evolution
-
-All database migrations for sensor data schemas must be **backward compatible**.
-
-**Governing Decision:** ADR-4-017 — *Data Migration Strategy*
+- sensor ingestion endpoints  
+- alerting thresholds  
+- notification targets  
+- database connection strings
 
 ---
 
-# 4. Incident Response & Recovery (Layer 5)
+### Error Handling
 
-When a failure occurs—such as a memory leak causing the sensor ingestion pipeline to stall—our incident discipline depends on the **structured logging, defined error codes, and deployment rollback capability** enforced elsewhere in the model.
+When a sensor payload is malformed or a threshold evaluation fails, the system enforces a **consistent taxonomy and representation for failures**.
 
-### Incident Priority
+This produces predictable and diagnosable failure behaviour.
 
-During incidents, we prioritise **service restoration over root cause analysis**.
+**Governing Decision:**  
+[ADR-4-024 — Error Handling & Classification Model](../adr/ADR-4-024-error-handling-classification-model.md)
 
-The goal is to minimise user impact, even if this introduces the risk of recurring incidents.
+Examples of failure classifications include:
 
-**Governing Decision:** ADR-5-018 — *Incident Response Model*
+- `SensorPayloadMalformed`
+- `SensorTimeout`
+- `ThresholdEvaluationFailure`
+- `AlertDispatchFailure`
 
-### Deployments & Rollback
+This standardised taxonomy allows failures to be **diagnosed quickly during incidents**.
 
-We use **sequential, deliberate deployments with manual verification**.
+---
 
-We accept longer deployment times because they guarantee reliable rollback capability.
+### Observability
 
-**Governing Decision:** ADR-4-014 — *Deployment Strategy*
+The platform emits **structured logs for all operational events**.
+
+Each log entry contains consistent metadata fields so that events remain machine-parseable and easy to correlate during operational investigations.
+
+Typical structured log fields include:
+
+- timestamp  
+- sensor ID  
+- processing stage  
+- threshold evaluation result  
+- error classification (if applicable)
+
+**Governing Decision:**  
+[ADR-4-025 — Structured Application Logging Strategy](../adr/ADR-4-025-structured-application-logging-strategy.md)
+
+Structured logs ensure that system behaviour remains:
+
+- observable  
+- diagnosable  
+- automation-friendly.
+
+---
+
+# 4. Framework Scope
+
+This repository intentionally includes **only a subset of the CodeWeave Architecture Decision Record library**.
+
+The five ADRs referenced here demonstrate the **core operational philosophy of the framework**, but they do not represent the complete decision set used in production environments.
+
+Additional decisions governing areas such as:
+
+- security boundaries  
+- dependency management  
+- backup strategies  
+- operational control  
+- deployment discipline  
+- incident response  
+
+exist within the **full CodeWeave ADR Framework**.
 
 ---
 
@@ -122,16 +125,18 @@ We accept longer deployment times because they guarantee reliable rollback capab
 If this system were built to maximise architectural ambition, it would likely use:
 
 - Kubernetes
-- Event-driven microservices
-- Autoscaling groups
-- Distributed tracing
+- event-driven microservices
+- autoscaling clusters
+- distributed tracing infrastructure
 
 We deliberately chose **not** to adopt these patterns.
 
-By keeping authentication intentionally simple to reduce the attack surface and optimising for **maintainability over performance**, we protect the team from on-call fatigue.
+Instead, the system is constrained by a small number of explicit architectural rules that optimise for:
+
+- operational clarity  
+- maintainability  
+- diagnosable failures.
 
 Constraints are easier to reason about than hidden coupling.
 
-This architecture is **complete, closed, and strictly governed by the CodeWeave ADR framework**.
-
-Any deviation or introduction of scaling complexity must be formally justified through the **Governance Control Plane**.
+This architecture is **intentionally simple, operationally legible, and governed by the CodeWeave ADR framework**.
