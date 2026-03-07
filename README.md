@@ -38,6 +38,29 @@ The full decision library is available in the **CodeWeave ADR Framework Pack**.
 
 ---
 
+
+# Repository Structure
+
+```
+codeweave-adr-framework/
+│
+├─ README.md
+├─ licence.md
+│
+├─ adr/
+│   ├─ ADR-0-001-default-execution-model.md
+│   ├─ ADR-3-012-context-preservation-strategy.md
+│   ├─ ADR-4-015-configuration-management.md
+│   ├─ ADR-4-024-error-handling-classification.md
+│   └─ ADR-4-025-structured-logging-strategy.md
+│
+└─ examples/
+    └─ system-context/
+        └─ industrial-sensor-monitoring-platform.md
+```
+
+---
+
 # Core Decisions (Public ADRs)
 
 These decisions represent foundational engineering constraints used throughout the framework.
@@ -107,26 +130,6 @@ B --> E
 
 ---
 
-# Repository Structure
-
-```
-codeweave-adr-framework/
-│
-├─ README.md
-│
-├─ adr/
-│   ├─ ADR-0-001-default-execution-model.md
-│   ├─ ADR-3-012-context-preservation-strategy.md
-│   ├─ ADR-4-015-configuration-management.md
-│   ├─ ADR-4-024-error-handling-classification.md
-│   └─ ADR-4-025-structured-logging-strategy.md
-│
-└─ docs/
-    └─ system-context/
-        └─ industrial-sensor-monitoring-platform.md
-```
-
----
 
 # Example System Context
 
