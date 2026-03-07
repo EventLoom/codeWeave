@@ -282,3 +282,9 @@ Example system contexts using this decision:
 
 - [Industrial Sensor Monitoring Platform](../examples/sensor-platform/system-context.md)
 - [Financial Reconcilation Platform](../examples/financial-reconciliation/system-context.md)
+
+---
+This ADR is part of the CodeWeave Architecture Decision Framework.
+
+Full framework: https://www.eventloomtech.com/codeweave
+---

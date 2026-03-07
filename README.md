@@ -45,7 +45,7 @@ The full decision library is available in the **CodeWeave ADR Framework Pack**.
 codeweave-adr-framework/
 │
 ├─ README.md
-├─ licence.md
+├─ LICENSE.md
 │
 ├─ adr/
 │   ├─ ADR-0-001-default-execution-model.md
@@ -55,14 +55,15 @@ codeweave-adr-framework/
 │   └─ ADR-4-025-structured-logging-strategy.md
 │
 └─ examples/
-    └─ financial-reconciliation/
-        └─ system-context.md
-        └─ adr-index.md
+    ├─ financial-reconciliation/
+    │   ├─ system-context.md
+    │   └─ adr-index.md
+    │
     └─ sensor-platform/
         └─ system-context.md
 
 ```
-
+⭐ If you find this useful, consider starring the repository.
 ---
 
 # Core Decisions (Public ADRs)
