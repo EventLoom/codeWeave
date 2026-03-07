@@ -28,6 +28,7 @@ All services must emit structured logs.
 
 ---
 
+
 ## Format Requirements
 
 Logs must:
