@@ -9,7 +9,7 @@ Because we expect systems to live longer than originally planned—and because w
 We deliberately reject hypothetical future scale in favour of operational clarity. The existence of this document itself is a requirement of our governance plane to ensure that the next engineer doesn't have to guess why we built it this way.
 
 **Governing Decision:**  
-[ADR-3-012 — Context Preservation Strategy](../adr/ADR-3-012-context-preservation-strategy.md)
+[ADR-3-012 — Context Preservation Strategy](../../adr/ADR-3-012-context-preservation-strategy.md)
 
 Architectural decisions are explicitly documented with rationale and trade-offs so that system intent remains visible to future engineers.
 
@@ -26,7 +26,7 @@ We gladly accept the trade-off of a **single point of failure and limited horizo
 The system runs on a **single Linux host**, which serves as the unit of failure, deployment, and operational responsibility.
 
 **Governing Decision:**  
-[ADR-0-001 — Default Execution Model](../adr/ADR-0-001-default-execution-model.md)
+[ADR-0-001 — Default Execution Model](../../adr/ADR-0-001-default-execution-model.md)
 
 By keeping the operational boundary constrained to a single host, we dramatically reduce coordination complexity and the number of failure modes that can emerge during incidents.
 
@@ -45,7 +45,7 @@ All runtime configuration is managed via **environment variables**.
 This guarantees simplicity and auditability over the hidden coupling of complex configuration files.
 
 **Governing Decision:**  
-[ADR-4-015 — Configuration Management](../adr/ADR-4-015-configuration-management.md)
+[ADR-4-015 — Configuration Management](../../adr/ADR-4-015-configuration-management.md)
 
 Examples of runtime configuration include:
 
@@ -63,7 +63,7 @@ When a sensor payload is malformed or a threshold evaluation fails, the system e
 This produces predictable and diagnosable failure behaviour.
 
 **Governing Decision:**  
-[ADR-4-024 — Error Handling & Classification Model](../adr/ADR-4-024-error-handling-classification-model.md)
+[ADR-4-024 — Error Handling & Classification Model](../../adr/ADR-4-024-error-handling-classification-model.md)
 
 Examples of failure classifications include:
 
@@ -91,7 +91,7 @@ Typical structured log fields include:
 - error classification (if applicable)
 
 **Governing Decision:**  
-[ADR-4-025 — Structured Application Logging Strategy](../adr/ADR-4-025-structured-application-logging-strategy.md)
+[ADR-4-025 — Structured Application Logging Strategy](../../adr/ADR-4-025-structured-application-logging-strategy.md)
 
 Structured logs ensure that system behaviour remains:
 
