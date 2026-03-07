@@ -1,0 +1,57 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.layer { font: bold 16px sans-serif; fill: #111; }
+.node { font: 13px sans-serif; fill: #333; }
+.box { fill: #f5f7fa; stroke: #444; stroke-width: 1.5; rx: 6; }
+.title { font: bold 22px sans-serif; fill: #111; }
+</style>
+
+<text x="450" y="40" text-anchor="middle" class="title">CodeWeave ADR Decision Map</text>
+
+<!-- Layer Labels -->
+<text x="60" y="120" class="layer">Layer 0</text>
+<text x="60" y="200" class="layer">Layer 1</text>
+<text x="60" y="280" class="layer">Layer 2</text>
+<text x="60" y="360" class="layer">Layer 3</text>
+<text x="60" y="440" class="layer">Layer 4</text>
+
+<!-- Layer 0 -->
+<rect x="150" y="90" width="220" height="40" class="box"></rect>
+<text x="260" y="115" text-anchor="middle" class="node">ADR-0-001 Execution Model</text>
+
+<rect x="400" y="90" width="220" height="40" class="box"></rect>
+<text x="510" y="115" text-anchor="middle" class="node">ADR-0-002 Orchestration Policy</text>
+
+<rect x="650" y="90" width="220" height="40" class="box"></rect>
+<text x="760" y="115" text-anchor="middle" class="node">ADR-0-003 Database Ownership</text>
+
+<!-- Layer 1 -->
+<rect x="200" y="170" width="220" height="40" class="box"></rect>
+<text x="310" y="195" text-anchor="middle" class="node">ADR-1-005 Trust Boundaries</text>
+
+<rect x="500" y="170" width="220" height="40" class="box"></rect>
+<text x="610" y="195" text-anchor="middle" class="node">ADR-1-006 Service Exposure</text>
+
+<!-- Layer 2 -->
+<rect x="300" y="250" width="220" height="40" class="box"></rect>
+<text x="410" y="275" text-anchor="middle" class="node">ADR-2-008 Scaling Philosophy</text>
+
+<rect x="550" y="250" width="220" height="40" class="box"></rect>
+<text x="660" y="275" text-anchor="middle" class="node">ADR-2-010 Deployment Model</text>
+
+<!-- Governance -->
+<rect x="350" y="330" width="220" height="40" class="box"></rect>
+<text x="460" y="355" text-anchor="middle" class="node">ADR-3-012 Context Preservation</text>
+
+<!-- Engineering -->
+<rect x="200" y="410" width="220" height="40" class="box"></rect>
+<text x="310" y="435" text-anchor="middle" class="node">ADR-4-015 Configuration Mgmt</text>
+
+<rect x="450" y="410" width="220" height="40" class="box"></rect>
+<text x="560" y="435" text-anchor="middle" class="node">ADR-4-024 Error Classification</text>
+
+<rect x="700" y="410" width="180" height="40" class="box"></rect>
+<text x="790" y="435" text-anchor="middle" class="node">ADR-4-025 Structured Logging</text>
+
+</svg>
