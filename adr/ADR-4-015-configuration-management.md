@@ -1,5 +1,7 @@
 # ADR-04-015: Configuration Management - Environment Variables Over Config Files
 
+> CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
+
 ## Status
 Accepted
 

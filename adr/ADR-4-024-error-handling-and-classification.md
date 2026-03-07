@@ -1,5 +1,7 @@
 # ADR-4-024: Error Handling and Classification Model
 
+> CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
+
 **Status**: Accepted  
 **Summary**: Defining a consistent taxonomy and representation for failures across services and APIs.  
 **Key Trade-off**: Increased upfront design effort vs. predictable and diagnosable failure behaviour  

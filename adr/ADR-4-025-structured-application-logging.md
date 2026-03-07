@@ -1,6 +1,8 @@
 
 # ADR-4-025: Structured Application Logging Strategy
 
+> CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
+
 **Status**: Accepted  
 **Summary**: Standardising structured logging across services to ensure consistent diagnostics and machine-parsable output.  
 **Key Trade-off**: Slight verbosity vs. operational clarity and automation readiness  
