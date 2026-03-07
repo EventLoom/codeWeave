@@ -97,3 +97,11 @@ Never log:
 
 - Schema enforcement required
 - Slight increase in payload size
+
+
+## Used By
+
+Example system contexts using this decision:
+
+- [Industrial Sensor Monitoring Platform](../examples/sensor-platform/system-context.md)
+- [Financial Reconcilation Platform](../examples/financial-reconciliation/system-context.md)

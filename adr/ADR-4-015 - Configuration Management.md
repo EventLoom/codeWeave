@@ -272,3 +272,11 @@ As a result of this decision:
 - incident response includes checking environment variables
 
 We deliberately choose simplicity over dynamic configuration.
+
+
+## Used By
+
+Example system contexts using this decision:
+
+- [Industrial Sensor Monitoring Platform](../examples/sensor-platform/system-context.md)
+- [Financial Reconcilation Platform](../examples/financial-reconciliation/system-context.md)

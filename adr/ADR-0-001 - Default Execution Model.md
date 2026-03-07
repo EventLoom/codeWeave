@@ -105,3 +105,13 @@ As a result of this decision:
 - engineering effort is focused on reliability, not infrastructure management
 
 We deliberately trade optionality for clarity.
+
+
+## Used By
+
+Example system contexts using this decision:
+
+- [Industrial Sensor Monitoring Platform](../examples/sensor-platform/system-context.md)
+- [Financial Reconcilation Platform](../examples/financial-reconciliation/system-context.md)
+
+---
