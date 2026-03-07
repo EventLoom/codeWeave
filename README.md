@@ -1,5 +1,11 @@
 # CodeWeave ADR Framework (Public Sample)
 
+![ADR](https://img.shields.io/badge/framework-Architecture%20Decision%20Records-blue)
+![Examples](https://img.shields.io/badge/examples-included-green)
+![Docs](https://img.shields.io/badge/docs-architecture%20guidance-purple)
+![Status](https://img.shields.io/badge/status-active-success)
+![Stars](https://img.shields.io/github/stars/EventLoom/CodeWeaveDev)
+
 Stop debating boilerplate architecture and build systems that let you sleep at night.
 
 This repository contains a **public sample of the CodeWeave Architecture Decision Record framework**.
