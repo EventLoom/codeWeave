@@ -61,43 +61,24 @@ These decisions represent foundational engineering constraints used throughout t
 
 ---
 
-# Decision Map
-```mermaid
-flowchart TD
-
-A[ADR-0-001 Default Execution Model]
-B[ADR-3-012 Context Preservation Strategy]
-C[ADR-4-015 Configuration Management]
-D[ADR-4-024 Error Classification]
-E[ADR-4-025 Structured Logging]
-
-A --> C
-A --> D
-C --> D
-D --> E
-B --> A
-B --> C
-B --> D
-B --> E
-
----
-
 # Repository Structure
 
+```
 codeweave-adr-framework/
 │
 ├─ README.md
 │
 ├─ adr/
-│ ├─ ADR-0-001-default-execution-model.md
-│ ├─ ADR-3-012-context-preservation-strategy.md
-│ ├─ ADR-4-015-configuration-management.md
-│ ├─ ADR-4-024-error-handling-classification.md
-│ └─ ADR-4-025-structured-logging-strategy.md
+│   ├─ ADR-0-001-default-execution-model.md
+│   ├─ ADR-3-012-context-preservation-strategy.md
+│   ├─ ADR-4-015-configuration-management.md
+│   ├─ ADR-4-024-error-handling-classification.md
+│   └─ ADR-4-025-structured-logging-strategy.md
 │
 └─ docs/
-└─ system-context/
-└─ industrial-sensor-monitoring-platform.md
+    └─ system-context/
+        └─ industrial-sensor-monitoring-platform.md
+```
 
 ---
 
