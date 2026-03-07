@@ -138,13 +138,12 @@ A couple of system context documents demonstrating how these ADRs are applied ca
 
 # Example ADR Index
 
-A couple of ADR Indexs - showing how you can use the system of governance purposes are here:
+A sample ADR Index - showing how you can use the system of governance purposes are here:
 
 → [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
 
-→ [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
 
-This example illustrates how architectural decisions are applied in real system documentation.
+These examples illustrate how architectural decisions are applied in real system documentation.
 
 ---
 
