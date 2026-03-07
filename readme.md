@@ -62,8 +62,7 @@ These decisions represent foundational engineering constraints used throughout t
 ---
 
 # Decision Map
-
-```mermaid
+mermaid
 flowchart TD
 
 A[ADR-0-001 Default Execution Model]
@@ -80,3 +79,49 @@ B --> A
 B --> C
 B --> D
 B --> E
+
+---
+
+# Repository Structure
+
+codeweave-adr-framework/
+│
+├─ README.md
+│
+├─ adr/
+│ ├─ ADR-0-001-default-execution-model.md
+│ ├─ ADR-3-012-context-preservation-strategy.md
+│ ├─ ADR-4-015-configuration-management.md
+│ ├─ ADR-4-024-error-handling-classification.md
+│ └─ ADR-4-025-structured-logging-strategy.md
+│
+└─ docs/
+└─ system-context/
+└─ industrial-sensor-monitoring-platform.md
+
+---
+
+# Example System Context
+
+A sample system context demonstrating how these ADRs are applied can be found here:
+
+→ [Industrial Sensor Monitoring Platform](./docs/system-context/industrial-sensor-monitoring-platform.md)
+
+This example illustrates how architectural decisions are applied in real system documentation.
+
+---
+
+# Why Only Five ADRs?
+
+The full CodeWeave framework contains additional architectural and operational decision records covering topics such as:
+
+- deployment strategy
+- observability
+- service decomposition
+- incident response
+- infrastructure ownership
+- scaling models
+
+This repository intentionally publishes only a limited subset of those decisions.
+
+The goal is to demonstrate the structure and philosophy of the framework without publishing the full engineering doctrine.
