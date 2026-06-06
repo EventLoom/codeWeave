@@ -1,7 +1,7 @@
-# ADR-03-012: Context Preservation Strategy — Decisions Must Outlive Authors
+﻿# ADR-03-012: Context Preservation Strategy — Decisions Must Outlive Authors
+
 
 > CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
-
 ## Status
 Accepted
 
@@ -82,7 +82,6 @@ Revisit only if:
 ## Consequences
 Architectural knowledge becomes durable and transferable.
 
-
 ## Used By
 
 Example system contexts using this decision:
@@ -94,4 +93,3 @@ Example system contexts using this decision:
 This ADR is part of the CodeWeave Architecture Decision Framework.
 
 Full framework: https://www.eventloomtech.com/codeweave
----

@@ -1,8 +1,7 @@
+﻿# ADR-4-025: Structured Application Logging Strategy
 
-# ADR-4-025: Structured Application Logging Strategy
 
 > CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
-
 **Status**: Accepted  
 **Summary**: Standardising structured logging across services to ensure consistent diagnostics and machine-parsable output.  
 **Key Trade-off**: Slight verbosity vs. operational clarity and automation readiness  
@@ -29,7 +28,6 @@ Without consistency:
 All services must emit structured logs.
 
 ---
-
 
 ## Format Requirements
 
@@ -82,9 +80,9 @@ Never log:
 
 ## Separation of Concerns
 
-- Operational logs → this ADR
-- Security audit logs → ADR-4-021
-- Metrics → ADR-4-013
+- Operational logs ? this ADR
+- Security audit logs ? ADR-4-021
+- Metrics ? ADR-4-013
 
 ---
 
@@ -101,7 +99,6 @@ Never log:
 - Schema enforcement required
 - Slight increase in payload size
 
-
 ## Used By
 
 Example system contexts using this decision:
@@ -113,4 +110,3 @@ Example system contexts using this decision:
 This ADR is part of the CodeWeave Architecture Decision Framework.
 
 Full framework: https://www.eventloomtech.com/codeweave
----

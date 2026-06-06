@@ -1,4 +1,4 @@
-# System Context: Internal Financial Reconciliation Engine
+﻿# System Context: Internal Financial Reconciliation Engine
 
 ## 1. System Overview
 
@@ -12,7 +12,7 @@ Because this system handles sensitive financial data, it is designed to **optimi
 We gladly accept that a batch job might take 20 minutes longer to run if the code remains simpler to debug during an incident.
 
 **Governing Decision:**  
-[ADR-3-012: Context Preservation Strategy — Explicitly documenting architectural decisions with rationale and trade-offs](../../adr/ADR-3-012-context-preservation.md)
+[ADR-3-012: Context Preservation Strategy — Explicitly documenting architectural decisions with rationale and trade-offs](../../adr/ADR-3-012-context-preservation-strategy.md)
 
 ---
 

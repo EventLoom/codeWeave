@@ -1,4 +1,4 @@
-# System Context: Industrial Sensor Monitoring Platform
+﻿# System Context: Industrial Sensor Monitoring Platform
 
 ## 1. System Overview
 
@@ -63,7 +63,7 @@ When a sensor payload is malformed or a threshold evaluation fails, the system e
 This produces predictable and diagnosable failure behaviour.
 
 **Governing Decision:**  
-[ADR-4-024 — Error Handling & Classification Model](../../adr/ADR-4-024-error-handling-classification-model.md)
+[ADR-4-024 — Error Handling & Classification Model](../../adr/ADR-4-024-error-handling-and-classification.md)
 
 Examples of failure classifications include:
 
@@ -91,7 +91,7 @@ Typical structured log fields include:
 - error classification (if applicable)
 
 **Governing Decision:**  
-[ADR-4-025 — Structured Application Logging Strategy](../../adr/ADR-4-025-structured-application-logging-strategy.md)
+[ADR-4-025 — Structured Application Logging Strategy](../../adr/ADR-4-025-structured-application-logging.md)
 
 Structured logs ensure that system behaviour remains:
 

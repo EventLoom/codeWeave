@@ -1,7 +1,7 @@
-# ADR-0-001: Defaulting to a Single Linux Host
+﻿# ADR-0-001: Defaulting to a Single Linux Host
+
 
 > CodeWeave Engineering Doctrine — Licensed for internal organisational use only. Redistribution or resale of this document as part of another framework, template library, or documentation product is not permitted.
-
 ## Status
 Accepted
 
@@ -108,7 +108,6 @@ As a result of this decision:
 
 We deliberately trade optionality for clarity.
 
-
 ## Used By
 
 Example system contexts using this decision:
@@ -120,4 +119,3 @@ Example system contexts using this decision:
 This ADR is part of the CodeWeave Architecture Decision Framework.
 
 Full framework: https://www.eventloomtech.com/codeweave
----

@@ -1,4 +1,4 @@
-# CodeWeave ADR Framework (Public Sample)
+﻿# CodeWeave ADR Framework (Public Sample)
 
 ![ADR](https://img.shields.io/badge/framework-Architecture%20Decision%20Records-blue)
 ![Examples](https://img.shields.io/badge/examples-included-green)
@@ -6,186 +6,74 @@
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Stars](https://img.shields.io/github/stars/EventLoom/CodeWeaveDev)
 
-Stop debating boilerplate architecture and build systems that let you sleep at night.
+# CodeWeave ADR Framework (Public Sample)
 
-This repository contains a **public sample of the CodeWeave Architecture Decision Record framework**.
+You've had the meeting. Someone wants to change how errors are 
+handled. Or the logging format. Or why you're not using Kubernetes.
 
-CodeWeave is an engineering doctrine designed for teams who:
+And you spend 40 minutes explaining a decision that was made 
+18 months ago by someone who has since left.
 
-- operate without dedicated platform or SRE functions
-- own systems end-to-end, including on-call responsibility
-- expect systems to live longer than originally planned
-- value predictable behaviour under operational stress
-
-# The CodeWeave Decision Constellation
-
-The CodeWeave framework is not a checklist or maturity ladder.
-
-It is a **constellation of interlocking architectural constraints** that collectively govern how systems are designed, deployed, and operated.
-
-Each decision is intentionally small in scope, but together they form a **governance plane that prevents accidental complexity**.
-
-[CodeWeave Full Framework](https://codeweave.lemonsqueezy.com/checkout)
-
-The full framework currently contains **35+ Architecture Decision Records** across several engineering domains:
-
-| Layer | Domain | Purpose |
-|------|------|------|
-| **0** | Structural Architecture | Execution boundaries, deployment models |
-| **1** | Security Boundaries | Trust zones and authentication models |
-| **2** | Operational Control | Service supervision and runtime control |
-| **3** | Governance Control Plane | Preventing architectural drift |
-| **4** | Engineering Standards | Logging, testing, configuration discipline |
-| **5** | Incident Response | Failure handling and recovery priorities |
-
-This repository includes a **small subset of those decisions** to demonstrate how the framework works in practice.
-
-The full decision library is available in the **CodeWeave ADR Framework Pack**.
+That's what this is for.
 
 ---
 
+## What CodeWeave is
 
-# Repository Structure
+A set of architectural decisions written down, with the reasoning 
+attached.
 
-```
-codeweave-adr-framework/
-│
-├─ README.md
-├─ LICENSE.md
-│
-├─ adr/
-│   ├─ ADR-0-001-default-execution-model.md
-│   ├─ ADR-3-012-context-preservation-strategy.md
-│   ├─ ADR-4-015-configuration-management.md
-│   ├─ ADR-4-024-error-handling-classification.md
-│   └─ ADR-4-025-structured-logging-strategy.md
-│
-└─ examples/
-    ├─ financial-reconciliation/
-    │   ├─ system-context.md
-    │   └─ adr-index.md
-    │
-    └─ sensor-platform/
-        └─ system-context.md
+Not a methodology. Not a maturity model. Just the decisions 
+your team keeps having to make again, already made, with enough 
+context that someone can actually understand why.
 
-```
-⭐ If you find this useful, consider starring the repository.
----
-
-# Core Decisions (Public ADRs)
-
-These decisions represent foundational engineering constraints used throughout the framework.
-
-| ADR | Title | Status | Why it matters |
-|---|---|---|---|
-| [ADR-0-001](./adr/ADR-0-001-default-execution-model.md) | Default Execution Model | Accepted | Defines the single-host operational baseline |
-| [ADR-3-012](./adr/ADR-3-012-context-preservation-strategy.md) | Context Preservation Strategy | Accepted | Ensures architectural reasoning is preserved |
-| [ADR-4-015](./adr/ADR-4-015-configuration-management.md) | Configuration Management | Accepted | Standardises runtime configuration |
-| [ADR-4-024](./adr/ADR-4-024-error-handling-classification.md) | Error Handling & Classification | Accepted | Creates predictable failure behaviour |
-| [ADR-4-025](./adr/ADR-4-025-structured-logging-strategy.md) | Structured Application Logging | Accepted | Enables reliable operational diagnostics |
+Built for teams who run their own systems. No dedicated platform 
+team. No SRE. You wrote it, you operate it, you fix it at 2am.
 
 ---
 
-# Read by Scenario
+## What's in this repo
 
-**I want to understand how the system is deployed**
+Five decisions from the full set:
 
-→ Read [ADR-0-001](./adr/ADR-0-001-default-execution-model.md)
+| ADR | Title |
+|-----|-------|
+| ADR-0-001 | Default Execution Model |
+| ADR-3-012 | Context Preservation Strategy |
+| ADR-4-015 | Configuration Management |
+| ADR-4-024 | Error Handling & Classification |
+| ADR-4-025 | Structured Application Logging |
 
----
+Trying to figure out where to start:
 
-**I want to understand how architectural reasoning is preserved**
+Deployment and runtime shape → ADR-0-001  
+Why decisions were made the way they were → ADR-3-012  
+Environment config and how it's handled → ADR-4-015  
+What happens when something breaks → ADR-4-024  
+What your logs should actually look like → ADR-4-025
 
-→ Read [ADR-3-012](./adr/ADR-3-012-context-preservation-strategy.md)
-
----
-
-**I want to know how runtime configuration should work**
-
-→ Read [ADR-4-015](./adr/ADR-4-015-configuration-management.md)
-
----
-
-**I want to know how failures should be classified**
-
-→ Read [ADR-4-024](./adr/ADR-4-024-error-handling-classification.md)
-
----
-
-**I want to understand logging expectations**
-
-→ Read [ADR-4-025](./adr/ADR-4-025-structured-logging-strategy.md)
+Plus two example system context documents showing how they 
+apply to real systems — a sensor platform and a financial 
+reconciliation system.
 
 ---
 
-# Decision Map
+## What's not in this repo
 
-```mermaid
-flowchart TD
+The full framework has 35+ decisions covering deployment, 
+observability, service boundaries, incident response, 
+and scaling.
 
-A[ADR-0-001 Default Execution Model]
-B[ADR-3-012 Context Preservation Strategy]
-C[ADR-4-015 Configuration Management]
-D[ADR-4-024 Error Classification]
-E[ADR-4-025 Structured Logging]
-
-A --> C
-A --> D
-C --> D
-D --> E
-B --> A
-B --> C
-B --> D
-B --> E
-```
+These five are the easy ones to read out of context.
+The rest are the decisions that actually hurt when 
+you get them wrong.
 
 ---
 
+## The full pack
 
-# Example System Context
+**→ [eventloomtech.com/codeweave](https://www.eventloomtech.com/codeweave)**
 
-A couple of system context documents demonstrating how these ADRs are applied can be found here:
-
-→ [Industrial Sensor Monitoring Platform](./examples/sensor-platform/system-context.md) 
-
-→ [Financial Reconciliation Platform](./examples/financial-reconciliation/system-context.md)
-
-# Example ADR Index
-
-A sample ADR Index - showing how you can use the system of governance purposes are here:
-
-→ [Financial Reconciliation Platform](./examples/financial-reconciliation/adr-index.md)
-
-
-These examples illustrate how architectural decisions are applied in real system documentation.
-
----
-
-# Why Only Five ADRs?
-
-The full CodeWeave framework contains additional architectural and operational decision records covering topics such as:
-
-- deployment strategy
-- observability
-- service decomposition
-- incident response
-- infrastructure ownership
-- scaling models
-
-This repository intentionally publishes only a limited subset of those decisions.
-
-The goal is to demonstrate the structure and philosophy of the framework without publishing the full engineering doctrine.
-
-
-[def]: ./examples/financial-recondsystem-context.md
-
-# Stop Re-Litigating the Same Architecture Debates
-
-If a decision is challenged, the **burden of proof lies with the alternative**.
-
-Re-litigation without new information is an **operational cost**.
-
-The full CodeWeave ADR framework contains **35+ battle-tested decisions** used to constrain architectural complexity and keep systems operationally legible.
-
-➡️ Get the full framework  
-https://codeweave.lemonsqueezy.com/checkout
+One-time download. Drop it in `/docs/adr`.
+Next time someone wants to relitigate the logging format,
+point them at ADR-4-025 and get back to work.
