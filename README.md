@@ -1,6 +1,4 @@
-﻿# CodeWeave ADR Framework (Public Sample)
-
-![ADR](https://img.shields.io/badge/framework-Architecture%20Decision%20Records-blue)
+﻿![ADR](https://img.shields.io/badge/framework-Architecture%20Decision%20Records-blue)
 ![Examples](https://img.shields.io/badge/examples-included-green)
 ![Docs](https://img.shields.io/badge/docs-architecture%20guidance-purple)
 ![Status](https://img.shields.io/badge/status-active-success)
